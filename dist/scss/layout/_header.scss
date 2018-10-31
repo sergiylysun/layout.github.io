@@ -1,0 +1,86 @@
+
+/*
+================================================================================
+|                                     HEADER                                   |
+================================================================================
+*/
+header{
+	background: #2c3e50;
+	width:100%; 
+	height: 44px;
+	line-height: 44px;
+	min-width: $min-width;
+	text-align:left;	
+	order: 1;	
+    -webkit-order: 1;
+}
+
+.header-content {
+	width: 70%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	justify-content: space-between;
+	font-family: 'Roboto';
+	box-sizing: border-box;
+}
+
+.logo-link {
+	display: block;
+	height: 44px;
+	@include font(25px, 44px, #27ae60);
+	font-weight: 900;
+	text-transform: uppercase;
+	background-color: #fff;
+	padding: 0 20px;
+}
+
+.nav-link {
+	@include font(15px, 32px, #fff);
+	font-weight: 400;
+	margin-right: 20px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.btn {
+	@include font(15px, 32px, #fff);
+	font-weight: 500;
+	text-transform: uppercase;
+	background-color: #27ae60;
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.01) 0%, rgba(255, 255, 255, 0.01) 100%);
+	@include radius(3px);
+	padding: 0 20px;
+
+	&:hover {
+		background-color: #36c773;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.header-content {
+		width: 100%;
+	}
+
+	.logo-link {
+		@include font(15px, 44px, #27ae60);
+	}
+
+	.nav-link {
+		@include font(10px, 32px, #fff);
+		margin-right: 5px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.btn {
+		@include font(10px, 32px, #fff);
+		padding: 0 10px;
+		margin-right: 10px;
+	}
+}
